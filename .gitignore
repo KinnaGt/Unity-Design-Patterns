@@ -1,0 +1,77 @@
+# This .gitignore file should be placed at the root of your Unity project directory
+
+# Ignore the standard Unity asset store tools
+/[Aa]ssets/[Aa]ssets-[Ss]tore/
+
+# Ignore the auto-generated /bin/ and /obj/ folders in a .NET-based Unity project
+[Bb]in/
+[Oo]bj/
+
+# Ignore the build directories
+[Bb]uild/
+[Bb]uilds/
+
+# Ignore the library, logs, and temp directories
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Ignore the project-specific settings
+/ProjectSettings/
+
+# Ignore the generated .vs/ folder (Visual Studio)
+.vs/
+
+# Ignore the auto-generated mono script files
+/Assets/MonoDevelop/
+
+# Ignore the Unity-generated files in the root directory
+/[Uu]nityGenerated/
+
+# Ignore the UserSettings directory (contains local user-specific settings)
+[Uu]serSettings/
+
+# Ignore the auto-generated .idea/ folder (JetBrains Rider)
+/.idea/
+
+# Ignore the generated crash reports
+*.crash
+
+# Ignore the generated stack traces
+*.stacktrace
+
+# Ignore the Unity cloud build files
+/[Uu]nity[Cc]loud[Bb]uild/
+
+# Ignore the crash logs and debug logs
+*.log
+*.pidb
+*.suo
+*.user
+*.userprefs
+*.csproj
+*.unityproj
+*.booproj
+*.svd
+*.pdb
+*.opendb
+*.VC.db
+*.pidb.meta
+
+# Ignore the built documentation
+[Dd]ocfx_project/_site/
+
+# Ignore the auto-generated package files
+/Packages/com.unity.*
+
+# TextMeshPro generated files
+/Assets/TextMesh Pro/
+
+# Ignore compiled assemblies
+/*.dll
+/*.exe
+/*.pdb
+/*.mdb
