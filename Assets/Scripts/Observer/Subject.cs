@@ -19,21 +19,29 @@ public class Subject : MonoBehaviour
 
     public event Action<float> ThingHappened;
 
-    public void DoThing()
+    [SerializeField]
+    Animator animator;
+
+    public void NotifyObservers()
     {
-        Debug.Log("Subject" + gameObject.name + "does thing");
+        Debug.Log("Subject " + gameObject.name + " does thing");
         ThingHappened?.Invoke(life);
     }
 
     void Attack()
     {
+        animator.SetTrigger("Attack");
+    }
+
+    public void DealDamage()
+    {
         enemy?.ReceiveDamage(damage);
     }
 
-    void ReceiveDamage(float damage)
+    public void ReceiveDamage(float damage)
     {
         life -= damage;
-        DoThing();
+        NotifyObservers();
         if (life <= 0)
         {
             Destroy(gameObject);
