@@ -4,6 +4,7 @@ public class Arrow : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float lifetime = 5f;
+    [SerializeField]
     private bool hasCollided;
 
     void OnEnable()
@@ -18,7 +19,7 @@ public class Arrow : MonoBehaviour
     {
         if (!hasCollided && rb.velocity != Vector2.zero)
         {
-            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg - 90f; // Ajusta el ángulo para que la punta apunte en la dirección correcta
+            float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg - 90f; 
             transform.rotation = Quaternion.Euler(0, 0, angle);
         }
     }
@@ -30,7 +31,7 @@ public class Arrow : MonoBehaviour
 
     void Deactivate()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); 
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -39,7 +40,8 @@ public class Arrow : MonoBehaviour
         {
             rb.velocity = Vector2.zero;
             rb.isKinematic = true;
-            hasCollided = true; // Marcar que la flecha ha colisionado
+            rb.angularVelocity = 0f; 
+            hasCollided = true; 
         }
     }
 }

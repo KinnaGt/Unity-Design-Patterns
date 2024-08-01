@@ -2591,7 +2591,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowSpawnPoint: {fileID: 1687918703}
   maxPullDistance: 2
-  maxForce: 5
+  maxForce: 10
 --- !u!1 &1948845956
 GameObject:
   m_ObjectHideFlags: 0
